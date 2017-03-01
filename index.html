@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>jQuery Template</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+    <script>
+      $(function(){
+          
+          $('button').click(function(){
+            var userBkgcolor = $('#bkgcolor').val();
+            $('div').val(userBkgcolor).css('background-color', userBkgcolor);
+
+          
+            });
+      });
+  </script>
+  <style>
+    div{
+      background-color:black;
+      width:600px;
+      height:500px;
+    }
+  </style>
+  </head>
+  
+  
+  <body>
+         Type the words you want to be put on the banner:
+         <input type="text" name="words"/>
+         <br>
+         <br>
+         Select the background color:
+         <input id="bkgcolor" type="color"/>
+         <br>
+         <br>
+         Select the text color:
+         <input id="txtcolor" type = "color"/>
+         <br>
+         <button>Generate</button>
+     <br>
+     <br>
+     <div></div>
+  </body>
+</html>
