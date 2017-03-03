@@ -2,34 +2,45 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>jQuery Template</title>
+    <title>Banner Generator</title>
+    <link href="https://fonts.googleapis.com/css?family=Alex+Brush" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
     <script>
+    
       $(function(){
           
           $('button').click(function(){
             var userBkgcolor = $('#bkgcolor').val();
             $('div').val(userBkgcolor).css('background-color', userBkgcolor);
-
-          
+            var userTxtcolor = $('#txtcolor').val();
+            $('h1').val(userTxtcolor).css('color', userTxtcolor);
+            var userText =$('#userWords').val();
+            $('h1').html(userText);
             });
       });
   </script>
   <style>
     div{
       background-color:black;
-      width:600px;
-      height:500px;
+      width:700px;
+      height:140px;
     }
+    h1{
+      text-align:center;
+      font-size:100px;
+      font-family: 'Alex Brush', cursive;
+    }
+
   </style>
   </head>
   
   
   <body>
+
          Type the words you want to be put on the banner:
-         <input type="text" name="words"/>
-         <br>
-         <br>
+         <input id="userWords" type="text"/>
+        <br>
+        <br>
          Select the background color:
          <input id="bkgcolor" type="color"/>
          <br>
@@ -37,9 +48,12 @@
          Select the text color:
          <input id="txtcolor" type = "color"/>
          <br>
+         <br>
          <button>Generate</button>
+
      <br>
-     <br>
-     <div></div>
+     <div>
+       <h1></h1>
+     </div>
   </body>
 </html>
